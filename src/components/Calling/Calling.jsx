@@ -73,7 +73,7 @@ const Calling = () => {
       </Box>
 
       {/* ID, Date, and Number...*/}
-      <Box sx={{ ml: 1, display: "flex", alignItems: "center", gap: "20px" }}>
+      <Box sx={{ ml: "32px", display: "flex", alignItems: "center", gap: "20px" }}>
         <Box
           sx={{
             display: "flex",
@@ -209,7 +209,8 @@ const Calling = () => {
             variant="outlined"
             placeholder="Поиск клиента"
             sx={{
-                ml: 2,
+                ml: "6px",
+                maxWidth:"180px",
                 fontSize:"14px",
                 '& .MuiOutlinedInput-root': {
                     border: '1px solid #1A99FF',
