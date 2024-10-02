@@ -3,6 +3,7 @@ import Header from './components/Header/Header'
 import Calling from './components/Calling/Calling'
 import {  Box } from '@mui/material';
 import MessageText from './components/MessageText/MessageText'
+import ClientInfo from './components/ClientInfo/ClientInfo';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
      <Header/>
      <Calling/>
      <MessageText/>
+     <ClientInfo/>
         
    </Box>
   )
