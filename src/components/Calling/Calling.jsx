@@ -47,7 +47,7 @@ const Calling = () => {
         overlap="circular"
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         badgeContent={
-          <SmallAvatar alt="Remy Sharp" src="/public/assets/russia.png"/>
+          <SmallAvatar alt="Remy Sharp" src="/assets/russia.png"/>
         }
       >
         <Avatar alt="Aravis Howard" src="/static/images/avatar/2.jpg" sx={{ width: '42px', height: '42px' }} />
