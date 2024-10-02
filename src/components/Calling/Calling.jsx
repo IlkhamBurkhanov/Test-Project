@@ -73,7 +73,7 @@ const Calling = () => {
       </Box>
 
       {/* ID, Date, and Number...*/}
-      <Box sx={{ ml: 10, display: "flex", alignItems: "center", gap: "20px" }}>
+      <Box sx={{ ml: 1, display: "flex", alignItems: "center", gap: "20px" }}>
         <Box
           sx={{
             display: "flex",
