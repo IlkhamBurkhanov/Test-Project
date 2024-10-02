@@ -72,8 +72,8 @@ const Calling = () => {
         </Button>
       </Box>
 
-      {/* ID, Date, and Number Buttons */}
-      <Box sx={{ ml: 10, display: "flex", alignItems: "center", gap: 5 }}>
+      {/* ID, Date, and Number...*/}
+      <Box sx={{ ml: 10, display: "flex", alignItems: "center", gap: "20px" }}>
         <Box
           sx={{
             display: "flex",
@@ -155,7 +155,7 @@ const Calling = () => {
       </Box>
 
       {/* Icon Buttons */}
-      <Box sx={{ display: "flex", alignItems: "center", ml: 2, gap:3}}>
+      <Box sx={{ display: "flex", alignItems: "center", ml: 2, gap:"6px"}}>
         <IconButton
           sx={{
             borderRadius: "50%",
