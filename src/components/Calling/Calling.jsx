@@ -12,7 +12,7 @@ import MicNoneIcon from '@mui/icons-material/MicNone';
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 import CircleIcon from '@mui/icons-material/Circle';
 import MapsUgcRoundedIcon from '@mui/icons-material/MapsUgcRounded';
-import Russia from "../../../public/assets/russia.png"
+
 
 
 
@@ -47,7 +47,7 @@ const Calling = () => {
         overlap="circular"
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         badgeContent={
-          <SmallAvatar alt="Remy Sharp" src="/assets/russia.png"/>
+          <SmallAvatar alt="Remy Sharp" src="./assets/russia.png"/>
         }
       >
         <Avatar alt="Aravis Howard" src="/static/images/avatar/2.jpg" sx={{ width: '42px', height: '42px' }} />
@@ -97,7 +97,7 @@ const Calling = () => {
           <Typography variant="h6" sx={{  color:"#8294AF", fontSize:"13px"}}>
           Дата рождения
           </Typography>
-          <Typography variant="h6" sx={{  color:"#2F2F37", fontSize:"14px" }}>{userDate}</Typography>
+          <Typography variant="h6" sx={{  color:"#2F2F37", fontSize:"14px", }}>{userDate}</Typography>
         </Box>
         <Box
           sx={{
@@ -164,7 +164,7 @@ const Calling = () => {
             backgroundColor: "#FF6E41"
           }}
         >
-          <CallEndIcon sx={{ color: '#ffffff' }}  />
+          <CallEndIcon sx={{ color: '#ffffff', height:"19px", width:"19px" }}  />
         </IconButton>
         <IconButton
           sx={{
@@ -173,7 +173,12 @@ const Calling = () => {
             margin: "0 4px",
           }}
         >
-          <PauseIcon />
+           <Box
+          component="img"
+          src="./assets/Pause.svg"
+          alt="sms"
+          sx={{}}
+        />
         </IconButton>
         <IconButton
           sx={{
@@ -182,7 +187,12 @@ const Calling = () => {
             margin: "0 4px",
           }}
         >
-          <MicNoneIcon />
+          <Box
+          component="img"
+          src="./assets/Microfon.svg"
+          alt="sms"
+          sx={{}}
+        />
         </IconButton>
         <IconButton
           sx={{
@@ -191,7 +201,12 @@ const Calling = () => {
             margin: "0 4px",
           }}
         >
-          <MapsUgcRoundedIcon sx={{ color: '#1A99FF',  }}/>
+          <Box
+          component="img"
+          src="./assets/Message.svg"
+          alt="sms"
+          sx={{}}
+        />
         </IconButton>
         <IconButton
           sx={{
@@ -200,7 +215,12 @@ const Calling = () => {
             margin: "0 4px",
           }}
         >
-          <AddIcCallIcon sx={{ color: '#1A99FF' }} />
+           <Box
+          component="img"
+          src="./assets/AddCall.svg"
+          alt="sms"
+          sx={{}}
+        />
         </IconButton>
       </Box>
 

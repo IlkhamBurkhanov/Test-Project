@@ -412,7 +412,7 @@ const ClientInfo = () => {
           },
         }}
       />
-      <Box sx={{paddingX:"24px", paddingY:"20px", backgroundColor:"#F5FFFB", border: "1px solid #2FB1EA", borderRadius: "12px", fontStyle: 'italic'}}>
+      <Box sx={{paddingX:"24px", paddingY:"20px", marginY:"20px", backgroundColor:"#F5FFFB", border: "1px solid #2FB1EA", borderRadius: "12px", fontStyle: 'italic'}}>
        <Typography variant="h6" sx={{fontSize:"15px"}}>
             <Box component="span" sx={{ fontWeight: 'bold', textTransform: 'uppercase'  }}>
             Спасибо за звонок в наш колл-центр.
