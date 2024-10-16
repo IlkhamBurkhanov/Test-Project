@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchPosts } from "../../api/Api"; // Import the fetchPosts function
+import useStore from "../../store/store";
 
 const PostsList = () => {
   const { data, isLoading, error } = useQuery({
@@ -10,6 +11,8 @@ const PostsList = () => {
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error fetching posts: {error.message}</div>;
+  const { count, increment, decrement } = useStore();
+
   console.log(data, "DATA");
   return (
     <div>
@@ -22,6 +25,11 @@ const PostsList = () => {
           </li>
         ))}
       </ul>
+      <div>
+        <h1>Count: {count}</h1>
+        <button onClick={increment}>Increment</button>
+        <button onClick={decrement}>Decrement</button>
+      </div>
     </div>
   );
 };
