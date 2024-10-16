@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
+const queryClient = new QueryClient();
+
 import Main from "./components/Main/Main";
 import "./index.css";
 
@@ -14,9 +23,11 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <ThemeProvider theme={theme}>
-      <Main />
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={theme}>
+        <Main />
+      </ThemeProvider>
+    </QueryClientProvider>
   );
 }
 
