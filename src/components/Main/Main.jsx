@@ -5,6 +5,7 @@ import { Box } from "@mui/material";
 import MessageText from "../MessageText/MessageText";
 import ClientInfo from "../ClientInfo/ClientInfo";
 import PostsList from "../TestQuery/TestQuery";
+import MyDrawer from "../TestQuery/MyDrawer";
 
 function Main() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,7 @@ function Main() {
       />
       <ClientInfo />
       <PostsList />
+      <MyDrawer />
     </Box>
   );
 }

@@ -10,10 +10,10 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import { Block } from "@mui/icons-material";
 import MessageText from "../MessageText/MessageText";
-import FormGroup from '@mui/material/FormGroup';
-import Checkbox from '@mui/material/Checkbox';
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
+import FormGroup from "@mui/material/FormGroup";
+import Checkbox from "@mui/material/Checkbox";
+import Stack from "@mui/material/Stack";
+import Button from "@mui/material/Button";
 
 const StyledFormControlLabel = styled((props) => (
   <FormControlLabel {...props} />
@@ -351,6 +351,7 @@ const ClientInfo = () => {
               ? data3?.map((item, index) => {
                   return (
                     <FormControlLabel
+                      key={index}
                       value={item}
                       fontSize="15px"
                       control={<Radio />}
@@ -412,48 +413,90 @@ const ClientInfo = () => {
           },
         }}
       />
-      <Box sx={{paddingX:"24px", paddingY:"20px", marginY:"20px", backgroundColor:"#F5FFFB", border: "1px solid #2FB1EA", borderRadius: "12px", fontStyle: 'italic'}}>
-       <Typography variant="h6" sx={{fontSize:"15px"}}>
-            <Box component="span" sx={{ fontWeight: 'bold', textTransform: 'uppercase'  }}>
+      <Box
+        sx={{
+          paddingX: "24px",
+          paddingY: "20px",
+          marginY: "20px",
+          backgroundColor: "#F5FFFB",
+          border: "1px solid #2FB1EA",
+          borderRadius: "12px",
+          fontStyle: "italic",
+        }}
+      >
+        <Typography variant="h6" sx={{ fontSize: "15px" }}>
+          <Box
+            component="span"
+            sx={{ fontWeight: "bold", textTransform: "uppercase" }}
+          >
             Спасибо за звонок в наш колл-центр.
-            </Box>Мы рады были помочь вам с вашим вопросом. Если у вас возникнут еще какие-либо вопросы или нужна дополнительная помощь, не стесняйтесь обращаться. Пожалуйста, хорошего дня/вечера!
-             
+          </Box>
+          Мы рады были помочь вам с вашим вопросом. Если у вас возникнут еще
+          какие-либо вопросы или нужна дополнительная помощь, не стесняйтесь
+          обращаться. Пожалуйста, хорошего дня/вечера!
         </Typography>
-       </Box>
+      </Box>
       {/* <MessageText textBold="Спасибо за звонок в наш колл-центр." text=" Мы рады были помочь вам с вашим вопросом. Если у вас возникнут еще какие-либо вопросы или нужна дополнительная помощь, не стесняйтесь обращаться. Пожалуйста, хорошего дня/вечера!"/> */}
-       <Box 
-        sx={{ 
-            display: 'flex', 
-            justifyContent: 'space-between', // Space between items
-            alignItems: 'center', // Center items vertically
-           // Optional padding for better spacing
-          }}>
-       <FormGroup>
-      <FormControlLabel
-        control={
-          <Checkbox 
-            defaultChecked 
-            sx={{
-              color: '#44C395', // Checkbox color when unchecked
-              '&.Mui-checked': {
-                color: '#44C395', // Checkbox color when checked
-              },
-            }} 
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between", // Space between items
+          alignItems: "center", // Center items vertically
+          // Optional padding for better spacing
+        }}
+      >
+        <FormGroup>
+          <FormControlLabel
+            control={
+              <Checkbox
+                defaultChecked
+                sx={{
+                  color: "#44C395", // Checkbox color when unchecked
+                  "&.Mui-checked": {
+                    color: "#44C395", // Checkbox color when checked
+                  },
+                }}
+              />
+            }
+            label={
+              <span style={{ fontSize: "15px", color: "black" }}>
+                Отправить клиенту СМС-сообщение, с ссылкой на Мобильное
+                приложение - «Zoomrad»
+              </span>
+            }
           />
-        }
-        label={
-          <span style={{ fontSize: '15px', color: 'black' }}>
-            Отправить клиенту СМС-сообщение, с ссылкой на Мобильное приложение - «Zoomrad»
-          </span>
-        }
-      />
-    </FormGroup>
-    <Stack spacing={2} direction="row">
-      
-      <Button variant="outlined" sx={{ color:"#8294AF", backgroundColor:'#F5F6FA', borderRadius:"8px", borderColor:"#F5F6FA", fontSize:"15px", fontWeight:700, paddingX:'38px'}}>Очистить</Button>
-      <Button variant="contained" sx={{ color:"#FFF", backgroundColor:'#1A99FF', borderRadius:"8px", borderColor:"#F5F6FA", fontSize:"15px", fontWeight:700, paddingX:'38px'}}>Завершить</Button>
-    </Stack>
-    </Box> 
+        </FormGroup>
+        <Stack spacing={2} direction="row">
+          <Button
+            variant="outlined"
+            sx={{
+              color: "#8294AF",
+              backgroundColor: "#F5F6FA",
+              borderRadius: "8px",
+              borderColor: "#F5F6FA",
+              fontSize: "15px",
+              fontWeight: 700,
+              paddingX: "38px",
+            }}
+          >
+            Очистить
+          </Button>
+          <Button
+            variant="contained"
+            sx={{
+              color: "#FFF",
+              backgroundColor: "#1A99FF",
+              borderRadius: "8px",
+              borderColor: "#F5F6FA",
+              fontSize: "15px",
+              fontWeight: 700,
+              paddingX: "38px",
+            }}
+          >
+            Завершить
+          </Button>
+        </Stack>
+      </Box>
     </Box>
   );
 };
